@@ -8,7 +8,14 @@ interface Props {
   posts: [Post];
 }
 
+
+
 export default function Home({ posts }: Props) {
+  const log = () => {
+    console.log(posts);
+    
+  }
+  log();
   return (
     <div className="">
       <Head>
@@ -39,6 +46,7 @@ export default function Home({ posts }: Props) {
       {/* Posts */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6 max-w-7xl mx-auto">
         {posts.map((post) => (
+          
           <Link key={post._id} href={`/post/${post.slug.current}`}>
             <div className="border rounded-lg group cursor-pointer overflow-hidden">
               <img
@@ -50,7 +58,7 @@ export default function Home({ posts }: Props) {
                 <div>
                   <p className="text-lg font-bold">{post.title}</p>
                   <p className="text-xs">
-                    {post.description} by {post.author.name}
+                    {post.description} by {post.author.name} on <span className="text-xs text-green-500 font-light">{new Date(post._createdAt).toDateString()}</span> 
                   </p>
                 </div>
                 <div>
@@ -71,6 +79,7 @@ export default function Home({ posts }: Props) {
 
 export const getServerSideProps = async () => {
   const query = `*[_type == "post"] {
+  _createdAt,
   _id,
   title,
   author-> {

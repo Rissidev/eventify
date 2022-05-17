@@ -107,7 +107,7 @@ const post = ({ post }: Props) => {
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col p-5 max-w-2xl mx-auto mb-10"
         >
-          <h3 className="text-sm text-yellow-500">Enjoyed this Event?</h3>
+          <h3 className="text-sm text-yellow-500">Like this event?</h3>
           <h2 className="text-3xl font-bold">Leave a registration below!</h2>
           <hr className="py-3 mt-2" />
 
@@ -137,12 +137,12 @@ const post = ({ post }: Props) => {
             />
           </label>
           <label className="block mb-5">
-            <span className="text-gray-700">Team Mates</span>
-            <textarea
+            <span className="text-gray-700">Department</span>
+            <input
               {...register("comment", { required: true })}
               className="shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-yellow-500 outline-none focus:ring"
-              placeholder="Share your team mates here!"
-              rows={8}
+              placeholder="Your department"
+              type="text"
             />
           </label>
 
@@ -157,7 +157,7 @@ const post = ({ post }: Props) => {
             )}
             {errors.comment && (
               <span className="text-red-500">
-                - The Comment Field is required
+                - The department Field is required
               </span>
             )}
           </div>
