@@ -63,9 +63,9 @@ const post = ({ post }: Props) => {
             alt=""
           />
           <p className="font-extralight text-sm">
-            Blog post by{" "}
+            Event post by{" "}
             <span className="text-green-600">{post.author.name}</span> -
-            Published at {new Date(post._createdAt).toLocaleString()}
+            Event on {new Date(post._createdAt).toLocaleString()}
           </p>
         </div>
 

@@ -39,7 +39,7 @@ export default {
     },
     {
       name: "publishedAt",
-      title: "Published at",
+      title: "Event On",
       type: "datetime",
     },
     {
