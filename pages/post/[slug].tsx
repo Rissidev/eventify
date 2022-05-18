@@ -123,7 +123,7 @@ const post = ({ post }: Props) => {
             <input
               {...register("name", { required: true })}
               className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-yellow-500 outline-none focus:ring"
-              placeholder="Jhon Doe"
+              placeholder="Enter Your Name"
               type="text"
             />
           </label>

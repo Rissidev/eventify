@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import { sanityClient, urlFor } from "../Sanity";
 import { Post } from "../typings";
 
+
 interface Props {
   posts: [Post];
 }
@@ -23,17 +24,17 @@ export default function Home({ posts }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      {/* Banner */}
-      <div className="flex justify-between items-center bg-yellow-300 border-y border-black py-10 lg:py-0 max-w-7xl mx-auto">
+     
+      <div className="flex justify-between items-center bg-amber-300 border-y border-black py-10 lg:py-0 max-w-7xl mx-auto">
         <div className="px-10 space-y-5">
           <h1 className="text-6xl max-w-xl font-serif">
             <span className="underline decoration-black decoration-4">
               Eventify
             </span>{" "}
-            is a place to regiter, participate, and won.
+            is a tool that makes it easy to conduct,coordinate and participate in a event.
           </h1>
           <h2>
-            It's easy and free to regiter your thinking on any event and connect
+            It's easy and free to register your thinking on any event and connect
             with coordinators.
           </h2>
         </div>
@@ -56,9 +57,9 @@ export default function Home({ posts }: Props) {
               />
               <div className="flex justify-between p-5 bg-white">
                 <div>
-                  <p className="text-lg font-bold">{post.title}</p>
+                  <p className="text-lg font-bold ">{post.title}</p>
                   <p className="text-xs">
-                    {post.description} by {post.author.name} on <span className="text-xs text-green-500 font-light">{new Date(post._createdAt).toDateString()}</span> 
+                    {post.description} on <span className="text-xs text-green-500 font-bold">{new Date(post._createdAt).toDateString()}</span> 
                   </p>
                 </div>
                 <div>
