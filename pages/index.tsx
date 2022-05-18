@@ -24,7 +24,7 @@ export default function Home({ posts }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-     
+      {/* Banner */}
       <div className="flex justify-between items-center bg-amber-300 border-y border-black py-10 lg:py-0 max-w-7xl mx-auto">
         <div className="px-10 space-y-5">
           <h1 className="text-6xl max-w-xl font-serif">
