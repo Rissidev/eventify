@@ -32,7 +32,7 @@ export default function Home({ posts }: Props) {
               Eventify
             </span>{" "}
             <span className="text-5xl">
-            is a place to regiter, coordinate, and manage events.
+            is a place to register, coordinate, and manage events.
             </span>
           </h1>
           <h2>
