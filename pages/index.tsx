@@ -31,7 +31,7 @@ export default function Home({ posts }: Props) {
             <span className="underline decoration-black decoration-4">
               Eventify
             </span>{" "}
-            <span class="text-5xl">
+            <span className="text-5xl">
             is a place to regiter, coordinate, and manage events.
             </span>
           </h1>
