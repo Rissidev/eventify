@@ -27,15 +27,18 @@ export default function Home({ posts }: Props) {
       {/* Banner */}
       <div className="flex justify-between items-center bg-amber-300 border-y border-black py-10 lg:py-0 max-w-7xl mx-auto">
         <div className="px-10 space-y-5">
-          <h1 className="text-6xl max-w-xl font-serif">
+          <h1 className="text-6xl max-w-xl font-serif ">
             <span className="underline decoration-black decoration-4">
               Eventify
             </span>{" "}
-            is a tool that makes it easy to conduct,coordinate and participate in a event.
+            <span class="text-5xl">
+            is a place to regiter, coordinate, and manage events.
+            </span>
           </h1>
           <h2>
             It's easy and free to register your thinking on any event and connect
             with coordinators.
+            
           </h2>
         </div>
         <img
