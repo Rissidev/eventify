@@ -64,8 +64,8 @@ const post = ({ post }: Props) => {
           />
           <p className="font-extralight text-sm">
             Event post by{" "}
-            <span className="text-green-600">{post.author.name}</span> -
-            Event on {new Date(post._createdAt).toLocaleString()}
+            <span className="text-green-600">{post.author.name}</span> - Event
+            on {new Date(post.publishedAt).toLocaleString()}
           </p>
         </div>
 
@@ -214,7 +214,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const query = `*[_type == "post" && slug.current == $slug][0]{
   _id,
-  _createdAt,
+  publishedAt,
   title,
   author-> {
     name,
