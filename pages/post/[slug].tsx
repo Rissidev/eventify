@@ -64,7 +64,7 @@ const post = ({ post }: Props) => {
           />
           <p className="font-extralight text-sm">
             Event post by{" "}
-            <span className="text-green-600">{post.author.name}</span> - Event
+            <span className="text-green-600 font-bold">{post.author.name}</span> dept - Event
             on {new Date(post.publishedAt).toLocaleString()}
           </p>
         </div>
@@ -100,7 +100,7 @@ const post = ({ post }: Props) => {
           <h3 className="text-3xl font-bold">
             Thank you for submitting your response!
           </h3>
-          <p>Once it has been approved, it will appear below!</p>
+          <p>Your registration is successful.</p>
         </div>
       ) : (
         <form
@@ -171,18 +171,7 @@ const post = ({ post }: Props) => {
 
       {/* Comments */}
 
-      <div className="flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-yellow-500 shadow space-y-2">
-        <h3 className="text-4xl">Teams</h3>
-        <hr className="pb-2" />
-        {post.comments.map((comment) => (
-          <div key={comment._id}>
-            <p className="">
-              <span className="text-yellow-500">{comment.name}:</span>{" "}
-              {comment.comment}
-            </p>
-          </div>
-        ))}
-      </div>
+     
     </main>
   );
 };

@@ -62,13 +62,7 @@ export default function Home({ posts }: Props) {
                     </span>
                   </p>
                 </div>
-                <div>
-                  <img
-                    className="h-12 w-12 rounded-full object-cover"
-                    src={urlFor(post.author.image).url()!}
-                    alt=""
-                  />
-                </div>
+                
               </div>
             </div>
           </Link>
