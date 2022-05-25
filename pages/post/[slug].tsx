@@ -119,11 +119,11 @@ const post = ({ post }: Props) => {
           />
 
           <label className="block mb-5">
-            <span className="text-gray-700">Name</span>
+            <span className="text-gray-700">Name & TeamMate Name</span>
             <input
               {...register("name", { required: true })}
               className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-yellow-500 outline-none focus:ring"
-              placeholder="Enter Your Name"
+              placeholder="Team member 1 & member 2"
               type="text"
             />
           </label>
@@ -137,11 +137,11 @@ const post = ({ post }: Props) => {
             />
           </label>
           <label className="block mb-5">
-            <span className="text-gray-700">Department</span>
+            <span className="text-gray-700">Department & Year</span>
             <input
               {...register("comment", { required: true })}
               className="shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-yellow-500 outline-none focus:ring"
-              placeholder="Your department"
+              placeholder="Your department & year"
               type="text"
             />
           </label>
